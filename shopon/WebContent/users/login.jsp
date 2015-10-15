@@ -8,5 +8,11 @@
 </head>
 <body>
 
+<form method="post" action="validateLogin.jsp">
+	Username <input type="text" name="username">
+	Password <input type="text" name="password">
+	<input type="submit" name="submit">
+</form>
+
 </body>
 </html>
