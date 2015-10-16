@@ -8,7 +8,7 @@ String password=request.getParameter("passwordsignup");
 String email=request.getParameter("emailsignup");
 String mobile=request.getParameter("mobilesignup");
 
-out.println(email);
+out.println(username);
 
 try{
 	/* connect database */
@@ -21,17 +21,17 @@ try{
 	/* insert record into database */
 	
 	Statement st=conn.createStatement();
-	st="INSERT INTO users (userName , userPassword , userEmail , userMobile) "+
+	String query="INSERT INTO users (userName , userPassword , userEmail , userMobile) "+
 		"VALUES('"+username+"','"+password+"','"+email+"','"+mobile+"')";
 	
 	int status;
-	status=st.executeUpdate(ps);
+	status=st.executeUpdate(query);
 	
 	out.println("status >>" + status);
 	
 	if(status>0) {
 		out.println("Successfully Registered " + username);
-		//request.sendRedirect("enter.jsp");
+		response.sendRedirect("enter.jsp");
 	}
 	else {
 		out.println("Registration failed");

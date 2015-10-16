@@ -26,6 +26,7 @@ try{
 	
 	if(status) {
 		out.println("Successfully logged in " + username);
+		response.sendRedirect("../node.jsp");
 	}
 	else {
 		out.println("login failed");
