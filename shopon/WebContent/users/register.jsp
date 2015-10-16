@@ -18,14 +18,14 @@ try{
 			"jdbc:mysql://localhost:3306/shopon",
 			"root","");
 
-	/* execute query */
+	/* insert record into database */
 	
 	Statement st=conn.createStatement();
-	String query="INSERT INTO users (userName , userPassword , userEmail , userMobile) "+
-			"VALUES(username , password , email, mobile)";
+	st="INSERT INTO users (userName , userPassword , userEmail , userMobile) "+
+		"VALUES('"+username+"','"+password+"','"+email+"','"+mobile+"')";
 	
 	int status;
-	status=st.executeUpdate(query);
+	status=st.executeUpdate(ps);
 	
 	out.println("status >>" + status);
 	
@@ -39,6 +39,6 @@ try{
 	
 }
 catch(Exception e) {
-	out.println("Connection problem >> " + e);
+	out.println("Problem >> " + e);
 }
 %>
