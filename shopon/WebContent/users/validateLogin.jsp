@@ -6,8 +6,6 @@
 String username=request.getParameter("username");
 String password=request.getParameter("password");
 
-out.println(username);
-
 try{
 	/* connect database */
 	
@@ -33,10 +31,8 @@ try{
 		out.println("login failed");
 		//request.sendRedirect("login.jsp");
 	}
-	
-	
 }
 catch(Exception e) {
-	out.println("Connection problem " + e);
+	out.println("Connection problem >> " + e);
 }
 %>
