@@ -8,13 +8,7 @@
 </head>
 <body>
 
-<% if(session.getAttribute("username")==null) {%>
-<a href="users/enter.jsp">Login Here</a>
-<%} 
-else {
-	out.print(session.getAttribute("username"));
-}
-%>
+
 
 </body>
 </html>

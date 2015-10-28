@@ -26,6 +26,10 @@ try{
 	
 	if(status) {
 		out.println("Successfully logged in " + username);
+		
+		/* Set session details */
+		session.setAttribute("username", username);
+		
 		response.sendRedirect("../node.jsp");
 	}
 	else {
