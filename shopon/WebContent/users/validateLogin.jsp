@@ -30,7 +30,7 @@ try{
 		/* Set session details */
 		session.setAttribute("username", username);
 		
-		response.sendRedirect("../node.jsp");
+		response.sendRedirect("../index.jsp");
 	}
 	else {
 		out.println("login failed");
